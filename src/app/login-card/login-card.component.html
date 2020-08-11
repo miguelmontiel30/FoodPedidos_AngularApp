@@ -1,21 +1,24 @@
 <!-- LOGIN CONTAINER -->
-<div class="container col-lg-4 col-md-8 col-sm-10 d-flex justify-content-center align-items-center login-container">
+<div
+    class="container col-xl-8 col-lg-8 col-md-8 col-sm-10 d-flex justify-content-center align-items-center login-container">
 
     <div class="card">
 
-        <h5 class="card-header card-header-container d-flex align-items-center py-4">
-            <img class="img-logo mx-2" src="./../../assets/img/icons/logo_chef.png" alt="Logotipo FoodPedidos">
-            <div class="col-sm-12">
+        <h5 class="card-header card-header-container pt-4">
+
+            <img class="img-logo mx-2 mb-2" src="./../../assets/img/icons/logo_chef.png" alt="Logotipo FoodPedidos">
+
+            <div class="col-sm-12 mb-2">
                 <span class="txt_food">Food</span>
                 <span class="txt_pedidos">Pedidos</span>
             </div>
         </h5>
 
         <!--Card content-->
-        <div class="card-body px-lg-5 pt-0">
+        <div class="card-body px-lg-5">
 
             <!-- Form -->
-            <form class="text-center" style="color: #757575;" action="#!">
+            <form class="text-center" style="color: #757575;" *ngIf="mostrar">
 
                 <!-- Email -->
                 <div class="md-form">
@@ -42,11 +45,12 @@
                     (click)="mostrar=!mostrar" type="button">
                     Iniciar Sesión
                 </button>
-                <span class="text-muted" *ngIf="mostrar">¡Le dio click a iniciar Sesion!</span>
+
+                <!-- <span class="text-muted" *ngIf="mostrar">¡Le dio click a iniciar Sesion!</span> -->
 
                 <!-- Register -->
                 <p>¿No tienes una cuenta?
-                    <a href="">Registrate aquí</a>
+                    <a href="" (click)="mostrar=!mostrar">Registrate aquí</a>
                 </p>
 
                 <!-- Social login -->
@@ -68,6 +72,45 @@
                 </p>
 
             </form>
+            <!-- Form -->
+
+            <!-- Form -->
+            <!-- <form class="text-center" *ngIf="!mostrar" style="color: #757575;"> -->
+
+                <!-- NAMES -->
+                <!-- <div class="md-form">
+                    <input type="text" id="nombre" class="form-control">
+                    <label for="nombre">Nombre</label>
+                </div> -->
+
+                <!-- <div class="md-form">
+                    <input type="text" id="apellidos" class="form-control">
+                    <label for="apellidos">Apellido(s)</label>
+                </div> -->
+
+                <!-- EMAIL -->
+                <!-- <div class="md-form">
+                    <input type="email" id="email" class="form-control">
+                    <label for="email">Correo Electrónico</label>
+                </div> -->
+
+                <!-- PHONE NUMBER -->
+                <!-- <div class="md-form mb-4">
+                    <input type="text" id="numero" class="form-control">
+                    <label for="numero">Número Telefónico</label>
+                </div> -->
+
+                <!-- Sign in button -->
+                <!-- <button class="btn btn-rounded btn-block my-4 waves-effect z-depth-0 btn-outline-warning" type="button">
+                    Siguiente
+                </button> -->
+
+                <!-- <button class="btn btn-rounded btn-block my-4 waves-effect z-depth-0 btn-outline-warning"
+                    (click)="mostrar=!mostrar" type="button">
+                    Cancelar
+                </button> -->
+
+            <!-- </form> -->
             <!-- Form -->
 
         </div>

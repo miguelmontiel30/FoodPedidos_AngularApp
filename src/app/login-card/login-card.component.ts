@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginCardComponent implements OnInit {
 
-  mostrar:boolean = false;
+  mostrar:boolean = true;
   
   constructor() { }
 
