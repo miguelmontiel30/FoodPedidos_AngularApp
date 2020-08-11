@@ -1,0 +1,9 @@
+.container-fondo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./../assets/img/background/pattern.png");
+    background-color: white;
+    opacity: 0.5;
+    z-index: 10;
+}

@@ -1,22 +1,77 @@
-<div class="container m-4 bg-info p-3">
+<!-- LOGIN CONTAINER -->
+<div class="container col-lg-4 col-md-8 col-sm-10 d-flex justify-content-center align-items-center login-container">
 
-    <form class="text-white col-4">
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="button" class="btn btn-warning" (click)="mostrar=!mostrar">Iniciar Sesion</button>
-        <span class="text-muted" *ngIf="mostrar">¡Le dio click a iniciar Sesion!</span>
-    </form>
+    <div class="card">
 
+        <h5 class="card-header card-header-container d-flex align-items-center py-4">
+            <img class="img-logo mx-2" src="./../../assets/img/icons/logo_chef.png" alt="Logotipo FoodPedidos">
+            <div class="col-sm-12">
+                <span class="txt_food">Food</span>
+                <span class="txt_pedidos">Pedidos</span>
+            </div>
+        </h5>
+
+        <!--Card content-->
+        <div class="card-body px-lg-5 pt-0">
+
+            <!-- Form -->
+            <form class="text-center" style="color: #757575;" action="#!">
+
+                <!-- Email -->
+                <div class="md-form">
+                    <input type="email" id="materialLoginFormEmail" class="form-control">
+                    <label for="materialLoginFormEmail">Correo Electrónico</label>
+                </div>
+
+                <!-- Password -->
+                <div class="md-form">
+                    <input type="password" id="materialLoginFormPassword" class="form-control">
+                    <label for="materialLoginFormPassword">Contraseña</label>
+                </div>
+
+                <!-- CONTAINER FORGOTTEN PASSWORD -->
+                <div class="d-flex justify-content-end">
+                    <!-- Forgot password -->
+                    <div>
+                        <a href="">¿Olvido su contraseña?</a>
+                    </div>
+                </div>
+
+                <!-- Sign in button -->
+                <button class="btn btn-rounded btn-block my-4 waves-effect z-depth-0 btn-outline-warning"
+                    (click)="mostrar=!mostrar" type="button">
+                    Iniciar Sesión
+                </button>
+                <span class="text-muted" *ngIf="mostrar">¡Le dio click a iniciar Sesion!</span>
+
+                <!-- Register -->
+                <p>¿No tienes una cuenta?
+                    <a href="">Registrate aquí</a>
+                </p>
+
+                <!-- Social login -->
+                <p>o inicia sesión con:</p>
+
+                <a type="button" class="btn-floating btn-fb btn-sm">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a type="button" class="btn-floating btn-gplus btn-sm">
+                    <i class="fab fa-google"></i>
+                </a>
+
+                <!-- Register -->
+                <p class="mt-2">
+                    <a href="">
+                        ¿Te gustaría vender con nosotros?
+                    </a>
+                </p>
+
+            </form>
+            <!-- Form -->
+
+        </div>
+
+    </div>
 </div>
+<!-- LOGIN CONTAINER -->

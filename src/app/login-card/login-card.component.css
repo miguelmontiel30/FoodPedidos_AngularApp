@@ -1,0 +1,27 @@
+.login-container {
+    height: 100vh;
+    width: 100vw;
+    z-index: 20;
+}
+
+.card-header-container {
+    background-color: transparent;
+    border-bottom: 0px solid rgba(0, 0, 0, .125);
+}
+
+.img-logo {
+    width: 45px;
+    height: 45px;
+}
+
+.txt_food {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #FEB03C;
+}
+
+.txt_pedidos {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #A47228;
+}
