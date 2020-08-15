@@ -1,0 +1,60 @@
+<!-- LOGIN CONTAINER -->
+<div
+    class="container col-xl-8 col-lg-8 col-md-8 col-sm-10 d-flex justify-content-center align-items-center login-container">
+
+    <div class="card">
+
+        <h5 class="card-header card-header-container pt-4">
+
+            <img class="img-logo mx-2 mb-2" src="./../../assets/img/icons/logo_chef.png" alt="Logotipo FoodPedidos">
+
+            <div class="col-sm-12 mb-2">
+                <span class="txt_food">Food</span>
+                <span class="txt_pedidos">Pedidos</span>
+            </div>
+        </h5>
+
+        <!--Card content-->
+        <div class="card-body px-lg-5">
+
+            <!-- Form -->
+            <form class="text-center" style="color: #757575;" *ngIf="mostrar">
+
+                <!-- Name(s) -->
+                <div class="md-form">
+                    <input type="text" id="materialRegisterFormName" class="form-control">
+                    <label for="materialRegisterFormName">Nombre(s)</label>
+                </div>
+
+                <!-- Last Name -->
+                <div class="md-form">
+                    <input type="text" id="materialRegisterFormLastName" class="form-control">
+                    <label for="materialRegisterFormLastName">Apellidos</label>
+                </div>
+
+                <!-- Email -->
+                <div class="md-form">
+                    <input type="email" id="materialLoginFormEmail" class="form-control">
+                    <label for="materialLoginFormEmail">Correo Electrónico</label>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="md-form mb-4">
+                    <input type="text" id="materialLoginFormNumberPhone" class="form-control">
+                    <label for="materialLoginFormNumberPhone">Número Telefónico</label>
+                </div>
+
+                <!-- Next button -->
+                <button class="btn btn-rounded btn-block my-4 waves-effect z-depth-0 btn-outline-warning" 
+                type="button" [routerLink]="['/password']">Siguiente</button>
+                
+                <!-- Cancel button-->
+                <button class="btn btn-rounded btn-block my-4 waves-effect z-depth-0 btn-outline-warning" (click)="mostrar=!mostrar" 
+                type="button" [routerLink]="['/login']">Cancelar</button> 
+
+            </form>
+            <!-- Form -->
+        </div>
+    </div>
+</div>
+<!-- LOGIN CONTAINER -->

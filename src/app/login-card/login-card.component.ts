@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class LoginCardComponent implements OnInit {
 
   mostrar:boolean = true;
-  
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
 }

@@ -117,8 +117,16 @@
               "devServerTarget": "FoodPedidos:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "FoodPedidos"
+    }
+  },
+  "defaultProject": "FoodPedidos",
+  "cli": {
+    "analytics": false
+  }
 }

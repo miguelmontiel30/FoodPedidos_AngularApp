@@ -42,7 +42,7 @@
 
                 <!-- Sign in button -->
                 <button class="btn btn-rounded btn-block my-4 waves-effect z-depth-0 btn-outline-warning"
-                    (click)="mostrar=!mostrar" type="button">
+                    (click)="mostrar=!mostrar" type="button" [routerLink]="['/home']">
                     Iniciar Sesión
                 </button>
 
@@ -50,7 +50,7 @@
 
                 <!-- Register -->
                 <p>¿No tienes una cuenta?
-                    <a href="" (click)="mostrar=!mostrar">Registrate aquí</a>
+                    <a href="" (click)="mostrar=!mostrar" [routerLink]="['/register']">Registrate aquí</a>
                 </p>
 
                 <!-- Social login -->

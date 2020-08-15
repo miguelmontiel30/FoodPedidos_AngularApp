@@ -14,6 +14,9 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
+import { PasswordComponent } from './password/password.component';
+import { RegisterComponent } from './register/register.component';
+
 
 const routes: Routes = [
   {path: 'cart', component: CartComponent},
@@ -33,7 +36,9 @@ const routes: Routes = [
     FavoritesComponent,
     NotificationsComponent,
     HomeComponent,
-    CartComponent
+    CartComponent,
+    PasswordComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,18 @@
+{
+  "targets": {
+    "login-ng-4d4d6": {
+      "hosting": {
+        "FoodPedidos": [
+          "login-ng-4d4d6"
+        ]
+      }
+    },
+    "foodpedidos-f6ac4": {
+      "hosting": {
+        "FoodPedidos": [
+          "foodpedidos-f6ac4"
+        ]
+      }
+    }
+  }
+}
