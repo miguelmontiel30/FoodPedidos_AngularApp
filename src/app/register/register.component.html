@@ -18,35 +18,47 @@
         <div class="card-body px-lg-5">
 
             <!-- Form -->
-            <form class="text-center" style="color: #757575;" *ngIf="mostrar">
+            <form class="text-center" style="color: #757575;" *ngIf="mostrar" [formGroup]="registerForm" (ngSubmit)="onRegister()">
 
                 <!-- Name(s) -->
                 <div class="md-form">
-                    <input type="text" id="materialRegisterFormName" class="form-control">
-                    <label for="materialRegisterFormName">Nombre(s)</label>
+                    <input type="text" id="name" class="form-control" formControlName="name">
+                    <label for="name">Nombre(s)</label>
                 </div>
 
                 <!-- Last Name -->
                 <div class="md-form">
-                    <input type="text" id="materialRegisterFormLastName" class="form-control">
-                    <label for="materialRegisterFormLastName">Apellidos</label>
+                    <input type="text" id="lastname" class="form-control" formControlName="lastname">
+                    <label for="lastname">Apellidos</label>
                 </div>
 
                 <!-- Email -->
                 <div class="md-form">
-                    <input type="email" id="materialLoginFormEmail" class="form-control">
-                    <label for="materialLoginFormEmail">Correo Electrónico</label>
+                    <input type="email" id="email" class="form-control" formControlName="email">
+                    <label for="email">Correo Electrónico</label>
                 </div>
 
                 <!-- Phone Number -->
                 <div class="md-form mb-4">
-                    <input type="text" id="materialLoginFormNumberPhone" class="form-control">
-                    <label for="materialLoginFormNumberPhone">Número Telefónico</label>
+                    <input type="text" id="number_phone" class="form-control" formControlName="number_phone">
+                    <label for="number_phone">Número Telefónico </label>
+                </div>
+
+                <!-- Password -->
+                <div class="md-form">
+                    <input type="password" id="password" class="form-control" formControlName="password">
+                    <label for="password">Contraseña</label>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="md-form">
+                    <input type="password" id="confirm_password" class="form-control" formControlName="confirm_password">
+                    <label for="confirm_password">Confirmar Contraseña</label>
                 </div>
 
                 <!-- Next button -->
                 <button class="btn btn-rounded btn-block my-4 waves-effect z-depth-0 btn-outline-warning" 
-                type="button" [routerLink]="['/password']">Siguiente</button>
+                type="submit ">Siguiente</button>
                 
                 <!-- Cancel button-->
                 <button class="btn btn-rounded btn-block my-4 waves-effect z-depth-0 btn-outline-warning" (click)="mostrar=!mostrar" 
