@@ -5,7 +5,7 @@ const routes: Routes =
 [
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   { 
@@ -23,6 +23,10 @@ const routes: Routes =
   { 
     path: 'password', 
     loadChildren: () => import('./password/password.module').then(m => m.PasswordModule) 
+  },
+  { 
+    path: 'main', 
+    loadChildren: () => import('./main/main.module').then(m => m.MainModule) 
   }
 ];
 
