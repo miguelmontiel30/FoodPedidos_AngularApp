@@ -1,6 +1,6 @@
 @font-face {
     font-family: hindsigulari;
-    src: url('./../../assets/webfonts/hind/HindSiliguri-Bold.ttf') format("opentype");
+    src: url('./../../../assets/webfonts/hind/HindSiliguri-Bold.ttf') format("opentype");
 }
 
 .login-container {
