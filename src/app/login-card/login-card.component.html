@@ -18,18 +18,18 @@
         <div class="card-body px-lg-5">
 
             <!-- Form -->
-            <form class="text-center" style="color: #757575;" *ngIf="mostrar">
+            <form class="text-center" style="color: #757575;" *ngIf="mostrar" [formGroup]="loginForm" (ngSubmit)="onLogin()">
 
                 <!-- Email -->
                 <div class="md-form">
-                    <input type="email" id="materialLoginFormEmail" class="form-control">
-                    <label for="materialLoginFormEmail">Correo Electrónico</label>
+                    <input type="email" id="email" class="form-control" formControlName="email">
+                    <label for="email">Correo Electrónico</label>
                 </div>
 
                 <!-- Password -->
                 <div class="md-form">
-                    <input type="password" id="materialLoginFormPassword" class="form-control">
-                    <label for="materialLoginFormPassword">Contraseña</label>
+                    <input type="password" id="password" class="form-control" formControlName="password">
+                    <label for="password">Contraseña</label>
                 </div>
 
                 <!-- CONTAINER FORGOTTEN PASSWORD -->
@@ -42,9 +42,7 @@
 
                 <!-- Sign in button -->
                 <button class="btn btn-rounded btn-block my-4 waves-effect z-depth-0 btn-outline-warning"
-                    (click)="mostrar=!mostrar" type="button" [routerLink]="['/home']">
-                    Iniciar Sesión
-                </button>
+                type="submit">Iniciar Sesión</button>
 
                 <!-- <span class="text-muted" *ngIf="mostrar">¡Le dio click a iniciar Sesion!</span> -->
 

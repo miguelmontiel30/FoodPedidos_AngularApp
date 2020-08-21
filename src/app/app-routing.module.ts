@@ -17,12 +17,12 @@ const routes: Routes =
     loadChildren: () => import('./login-card/login-card.module').then(m => m.LoginCardModule) 
   }, 
   { 
-    path: 'password', 
-    loadChildren: () => import('./password/password.module').then(m => m.PasswordModule) 
-  }, 
-  { 
     path: 'register', 
     loadChildren: () => import('./register/register.module').then(m => m.RegisterModule) 
+  },
+  { 
+    path: 'password', 
+    loadChildren: () => import('./password/password.module').then(m => m.PasswordModule) 
   }
 ];
 
