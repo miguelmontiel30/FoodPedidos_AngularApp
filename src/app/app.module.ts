@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire' ;
 import { environment } from 'src/environments/environment';
+import { SendEmailComponent } from './send-email/send-email.component';
 
 
 const routes: Routes = [
@@ -44,6 +45,7 @@ const routes: Routes = [
     CartComponent,
     RegisterComponent, 
     PasswordComponent, 
+    SendEmailComponent, 
   ],
   imports: [
     BrowserModule, AppRoutingModule, RouterModule.forRoot(routes), ReactiveFormsModule,

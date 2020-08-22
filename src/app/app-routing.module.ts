@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SendEmailComponent } from './send-email/send-email.component';
 
 const routes: Routes = 
 [
@@ -15,6 +16,10 @@ const routes: Routes =
   { 
     path: 'login-card', 
     loadChildren: () => import('./login/login-card/login-card.module').then(m => m.LoginCardModule) 
+  },
+  { 
+    path: 'register', 
+    loadChildren: () => import('./register/register-card/register.module').then(m => m.RegisterModule) 
   }, 
   { 
     path: 'password', 
@@ -24,9 +29,9 @@ const routes: Routes =
     path: 'main', 
     loadChildren: () => import('./main/main.module').then(m => m.MainModule) 
   },
-  { 
-    path: 'register', 
-    loadChildren: () => import('./register/register-card/register.module').then(m => m.RegisterModule) 
+  {
+    path: 'verification-email',
+    component: SendEmailComponent
   }
 ];
 

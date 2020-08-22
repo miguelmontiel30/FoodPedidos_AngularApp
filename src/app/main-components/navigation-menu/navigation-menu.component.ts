@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
-import { AuthService } from './../../services/auth.service';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
  
 @Component({
   selector: 'app-navigation-menu',
@@ -8,19 +10,16 @@ import { AuthService } from './../../services/auth.service';
   styleUrls: ['./navigation-menu.component.css'],
   providers: [AuthService]
 }) 
-export class NavigationMenuComponent implements OnInit {
-public isLogged = false;
+export class NavigationMenuComponent {
+ 
+  public user$: Observable<any> = this.authSvc.afAuth.user; 
 
-  constructor(private authSvc: AuthService) { }
+  constructor(private authSvc: AuthService, private router: Router) { }
 
-  async ngOnInit() {
+  async onLogout(){
     try{
-      console.log('Navbar');
-      const user = await this.authSvc.getCurrentUser();
-      if(user){
-        this.isLogged = true;
-        console.log('User->', user);
-      }
+      await this.authSvc.logout();
+      this.router.navigate(['/login']);
     }catch(error){
       console.log(error);
     }
