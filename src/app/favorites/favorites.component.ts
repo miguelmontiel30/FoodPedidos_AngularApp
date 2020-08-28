@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FoodListComponent } from './../food-list/food-list.component';
 
 @Component({
   selector: 'app-favorites',
