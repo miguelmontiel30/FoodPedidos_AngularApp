@@ -1,10 +1,71 @@
-<div class="container-fondo"></div>
+<!-- <div class="container-fondo"></div> -->
 
-<div class="container">
+<!-- <div class="container-fluid p-0">
     <div class="row">
         <div class="col-12">
-            <router-outlet></router-outlet>
         </div>
     </div>
-</div>
+</div> -->
+<!-- <router-outlet></router-outlet> -->
 
+<!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg principal_navbar d-flex align-items-center">
+    <a class="navbar-brand" href="#">
+        <img src="./../assets/img/icons/logo_chef.png" width="30" height="30" class="d-inline-block align-top" alt="Logo FoodPedidos">
+        <span class="ml-2 primary_text">Food</span><span class="secondary_text">Pedidos</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+        aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <button class="btn btn-outline-warning btn-md my-2 my-sm-0 ml-3" type="submit">Iniciar Sesión</button>
+                    <span class="sr-only">(Iniciar Sesion)</span>
+                </a>
+            </li>
+            <li class="nav-item">                
+                <a class="nav-link" href="#">
+                    <i class="fab fa-instagram"></i> Registrarse</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--/.Navbar -->
+
+<!-- BACKGROUND CONTAINER -->
+<div class="video_container">
+    <video class="video_filter_container" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+        <source src="./../assets/media/fondo.mp4" type="video/mp4">
+        Lo sentimos, su navegador no soporta videos.
+    </video>
+</div>
+<!-- BACKGROUND CONTAINER -->
+
+<!-- MESSAGE, SEARCH AND BUTTON -->
+<div class="content">
+
+    <div class="container col-md-12">
+        <div class="container col-md-6 text-center">
+
+            <h1 class="welcome_text">
+                ¿Hambre?
+                <span class="primary_text">Food</span><span class="secondary_text">Pedidos</span>
+            </h1>
+
+            <h2 class="search_text mt-3">Busca algo que comer</h2>
+        </div>
+
+        <div class="container col-md-6">
+            <input type="text" class="search_input my-4" name="" id="" placeholder="Sugerencia: Guajolotes">
+            <button id="" class="btn btn-md btn-block btn-warning">
+                Buscar
+                <i class="ml-1 far fa-search"></i>
+            </button>
+        </div>
+
+    </div>
+</div>
+<!-- MESSAGE, SEARCH AND BUTTON -->
