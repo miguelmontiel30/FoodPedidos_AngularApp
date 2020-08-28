@@ -18,24 +18,16 @@ const routes: Routes =
   }, 
   { 
     path: 'password', 
-<<<<<<< Updated upstream
+
     loadChildren: () => import('./password/password.module').then(m => m.PasswordModule) 
   }, 
-  { 
-<<<<<<< Updated upstream
-    path: 'register', 
-    loadChildren: () => import('./register/register.module').then(m => m.RegisterModule) 
-=======
-    path: 'main', 
-    loadChildren: () => import('./main/main.module').then(m => m.MainModule) 
-=======
-    loadChildren: () => import('./login/password/password.module').then(m => m.PasswordModule) 
+  {
+    path: 'password-changed',
+    loadChildren: () => import('./login/password/password.module').then(m => m.PasswordModule)
   }, 
   { 
     path: 'register', 
-    loadChildren: () => import('./register/register-card/register.module').then(m => m.RegisterModule) 
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+    loadChildren: () => import('./register/register-card/register.module').then(m => m.RegisterModule)
   }
 ];
 
