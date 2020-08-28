@@ -1,97 +1,10 @@
-@font-face {
-    font-family: Hindsigulari;
-    src: url('./../assets/webfonts/hind/HindSiliguri-Bold.ttf') format("opentype");
-}
 
-/* .container-fondo {
+.container-fondo {
     position: absolute;
     width: 100vw;
     height: 100vh;
     background-image: url("./../assets/img/background/pattern.png");
     background-color: white;
     opacity: 0.4;
-    z-index: 10;
-}*/
-
-.principal_navbar{
-    width: 100%;
-    position: absolute;
-    z-index: 30;
-}
-
-.welcome_text {
-    font-family: Hindsigulari, Arial, Helvetica, sans-serif;
-    font-size: 3.5rem;
-    font-style: normal;
-    font-weight: bold;
-}
-
-.primary_text {
-    color: #feb03c;
-}
-
-.secondary_text {
-    color: #A47228;
-}
-
-.search_text {
-    font-family: Hindsigulari, Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: normal;
-    color: #feb03c;
-}
-
-.search_input {
-    background-color: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 6px;
-    /* border: 1px solid #ffffffd8; */
-    width: 100%;
-    height: 2.5rem;
-    text-align: center;
-    /* color: #feb03c; */
-    color: white;
-}
-
-.search_input:focus {
-    background-color: rgba(63, 63, 63, 0.6);
-    border: 1px solid rgba(63, 63, 63, 0.6);
-}
-
-.search_input::placeholder {
-    color: #cacaca;
-    opacity: 1;
-}
-
-.video_container {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
-    position: absolute;
-    z-index: 10;
-}
-
-.video_filter_container {
-    width: inherit;
-    height: inherit;
-    -o-filter: blur(15px);
-    filter: blur(15px);
-    object-fit: cover;
-    transform: scale(1.06);
-}
-
-.content {
-    width: 100%;
-    height: 100vh;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    /* padding: 20px; */
-    position: fixed;
-    z-index: 20;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /*z-index: 10;*/
 }

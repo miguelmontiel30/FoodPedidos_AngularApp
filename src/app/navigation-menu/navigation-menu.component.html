@@ -1,43 +1,40 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-  <a class="nav-link text-warning navbar-brand" [routerLink]="['/home']">
-    <img src="./../assets/img/icons/logo_chef.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    <span>Food</span><span>Pedidos</span>
-  </a>
+    <a class="nav-link text-warning navbar-brand" [routerLink]="['/home']">FoodPedidos</a>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/home']">Inicio</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/cart']">Carrito</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/favorites']">Favoritos</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/notifications']">Notificaciones</a>
-      </li>
-
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item" *ngIf="!isLogged">
-          <a class="nav-link" [routerLink]="['/login']">Iniciar Sesion</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']">Inicio</a>
         </li>
-        <li class="nav-item" *ngIf="isLogged">
-          <a class="nav-link" [routerLink]="['/login']">Cerrar Sesión</a>
+
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/cart']">Carrito</a>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/favorites']">Favoritos</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/notifications']">Notificaciones</a>
+        </li>
+
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item" *ngIf="!isLogged">
+            <a class="nav-link" [routerLink]="['/login']">Iniciar Sesion</a>
+          </li>
+          <li class="nav-item" *ngIf="isLogged">
+            <a class="nav-link" [routerLink]="['/login']">Cerrar Sesión</a>
+          </li>
+        </ul>
+        
+
       </ul>
-
-
-    </ul>
-  </div>
+    </div>
 </nav>
