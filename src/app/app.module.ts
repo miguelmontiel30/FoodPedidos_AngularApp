@@ -21,7 +21,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire' ;
 import { environment } from 'src/environments/environment';
-import { PrincipalSearchComponent } from './principal-search/principal-search.component';
 const routes: Routes = [
   {path: 'cart', component: CartComponent},
   {path: 'login', component: LoginCardComponent},
@@ -42,7 +41,7 @@ const routes: Routes = [
     HomeComponent, 
     CartComponent,
     RegisterComponent, 
-    PasswordComponent, PrincipalSearchComponent, 
+    PasswordComponent, 
   ],
   imports: [
     BrowserModule, AppRoutingModule, RouterModule.forRoot(routes), ReactiveFormsModule,
