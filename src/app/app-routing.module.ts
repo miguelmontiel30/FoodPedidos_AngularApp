@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SendEmailComponent } from './send-email/send-email.component';
 
 const routes: Routes = 
 [
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   { 
@@ -15,27 +16,26 @@ const routes: Routes =
   { 
     path: 'login-card', 
     loadChildren: () => import('./login/login-card/login-card.module').then(m => m.LoginCardModule) 
-  }, 
-  { 
-    path: 'password', 
-<<<<<<< Updated upstream
-    loadChildren: () => import('./password/password.module').then(m => m.PasswordModule) 
-  }, 
-  { 
-<<<<<<< Updated upstream
-    path: 'register', 
-    loadChildren: () => import('./register/register.module').then(m => m.RegisterModule) 
-=======
-    path: 'main', 
-    loadChildren: () => import('./main/main.module').then(m => m.MainModule) 
-=======
-    loadChildren: () => import('./login/password/password.module').then(m => m.PasswordModule) 
-  }, 
+  },
   { 
     path: 'register', 
     loadChildren: () => import('./register/register-card/register.module').then(m => m.RegisterModule) 
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+  }, 
+  { 
+    path: 'password', 
+    loadChildren: () => import('./login/password/password.module').then(m => m.PasswordModule) 
+  },
+  { 
+    path: 'main', 
+    loadChildren: () => import('./main/main.module').then(m => m.MainModule) 
+  },
+  {
+    path: 'verification-email',
+    component: SendEmailComponent
+  },
+  { 
+    path: 'forgot-password', 
+    loadChildren: () => import('./auth/forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule) 
   }
 ];
 

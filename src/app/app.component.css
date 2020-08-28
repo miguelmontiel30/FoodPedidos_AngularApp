@@ -4,6 +4,6 @@
     height: 100vh;
     background-image: url("./../assets/img/background/pattern.png");
     background-color: white;
-    opacity: 0.5;
-    z-index: 10;
+    opacity: 0.4;
+    /*z-index: 10;*/
 }
