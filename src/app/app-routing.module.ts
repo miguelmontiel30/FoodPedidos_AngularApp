@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SendEmailComponent } from './send-email/send-email.component';
 
 const routes: Routes = 
 [
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   { 
@@ -15,19 +16,26 @@ const routes: Routes =
   { 
     path: 'login-card', 
     loadChildren: () => import('./login/login-card/login-card.module').then(m => m.LoginCardModule) 
+  },
+  { 
+    path: 'register', 
+    loadChildren: () => import('./register/register-card/register.module').then(m => m.RegisterModule) 
   }, 
   { 
     path: 'password', 
-
-    loadChildren: () => import('./password/password.module').then(m => m.PasswordModule) 
-  }, 
-  {
-    path: 'password-changed',
-    loadChildren: () => import('./login/password/password.module').then(m => m.PasswordModule)
-  }, 
+    loadChildren: () => import('./login/password/password.module').then(m => m.PasswordModule) 
+  },
   { 
-    path: 'register', 
-    loadChildren: () => import('./register/register-card/register.module').then(m => m.RegisterModule)
+    path: 'main', 
+    loadChildren: () => import('./main/main.module').then(m => m.MainModule) 
+  },
+  {
+    path: 'verification-email',
+    component: SendEmailComponent
+  },
+  { 
+    path: 'forgot-password', 
+    loadChildren: () => import('./auth/forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule) 
   }
 ];
 

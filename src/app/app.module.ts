@@ -18,6 +18,13 @@ import { CartComponent } from './cart/cart-card/cart.component';
 import { PasswordComponent } from './login/password/password.component';
 import { RegisterComponent } from './register/register-card/register.component';
 
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire' ;
+import { environment } from 'src/environments/environment';
+import { SendEmailComponent } from './send-email/send-email.component';
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
+
+
 const routes: Routes = [
   {path: 'cart', component: CartComponent},
   {path: 'login', component: LoginCardComponent},
@@ -29,21 +36,23 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginCardComponent,
-    FoodListComponent,
+    AppComponent, 
+    LoginCardComponent, 
+    FoodListComponent, 
     NavigationMenuComponent,
-    FavoritesComponent,
-    NotificationsComponent,
-    HomeComponent,
+    FavoritesComponent, 
+    NotificationsComponent, 
+    HomeComponent, 
     CartComponent,
-    PasswordComponent,
-    RegisterComponent
+    RegisterComponent, 
+    PasswordComponent, 
+    SendEmailComponent, 
+    ForgotPasswordComponent, 
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot(routes)
+    BrowserModule, AppRoutingModule, RouterModule.forRoot(routes), ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
   providers: [
     GetFoodItemsService
