@@ -1,25 +1,17 @@
-import { Injectable } from '@angular/core'; 
+import { Injectable } from '@angular/core';
+import { auth } from 'firebase/app';
+import { User } from 'firebase';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { first } from 'rxjs/operators';
 
 @Injectable()
 export class AuthService {
 
+  public user : User;
+
   constructor(public afAuth: AngularFireAuth) { }
 
   //Metodos de validación de formularios.
-
-  async resetPassword(email: string): Promise<void>{
-    try{
-      return this.afAuth.sendPasswordResetEmail(email);
-    }catch(error){
-      console.log(error);
-    }
-  }
-
-  async sendVerificationEmail(): Promise<void>{
-    return (await this.afAuth.currentUser).sendEmailVerification();
-  }
 
   async login(email: string, password: string){
     try{
@@ -39,7 +31,6 @@ export class AuthService {
         email, 
         password
         );
-        this.sendVerificationEmail();
         return result;
     }catch(error){
       console.log(error);
@@ -51,6 +42,14 @@ export class AuthService {
       await this.afAuth.signOut(); 
     }catch(error){
       console.log(error);
+    }
+  }
+
+  getCurrentUser(){
+    try{
+      return this.afAuth.authState.pipe(first()).toPromise();
+    }catch(error){
+      console.log(error); 
     }
   }
 }

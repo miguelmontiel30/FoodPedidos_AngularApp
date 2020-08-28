@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
-import { AuthService } from './../../services/auth.service';
-import { ConstantPool } from '@angular/compiler';
-import { Router } from '@angular/router';
+import { AuthService } from './../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -23,19 +21,14 @@ export class RegisterComponent implements OnInit {
     confirm_password: new FormControl('')
   });
 
-  constructor(private authSvc: AuthService, private router: Router) { }
+  constructor(private authSvc: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  async onRegister(){
+  onRegister(){
     const { email, password } = this.registerForm.value;
-    try{
-      const user = await this.authSvc.register(email, password);
-      this.router.navigate(['/verification-email']);
-    }catch(error){
-      console.log(error);
-    }
+    this.authSvc.register(email, password); 
   }
 
 }
